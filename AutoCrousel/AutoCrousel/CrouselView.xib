@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CrouselView" customModule="AutoCrousel" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Tza-wM-Mrh"/>
+                <outlet property="imgCrousel" destination="Eqs-h0-Zem" id="rDr-xo-ir7"/>
+                <outlet property="progressStackView" destination="PA4-B7-cPd" id="mYi-jr-FIx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eqs-h0-Zem">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PA4-B7-cPd">
+                    <rect key="frame" x="20" y="79" width="353" height="709"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PA4-B7-cPd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="3Ps-0H-Yyf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="PA4-B7-cPd" secondAttribute="trailing" constant="20" id="GyZ-2d-MBF"/>
+                <constraint firstItem="PA4-B7-cPd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="OSK-MJ-0ej"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Eqs-h0-Zem" secondAttribute="trailing" id="OYD-AJ-YhQ"/>
+                <constraint firstItem="Eqs-h0-Zem" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PMb-Wd-9bi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Eqs-h0-Zem" secondAttribute="bottom" id="dwn-Eh-Ygh"/>
+                <constraint firstItem="Eqs-h0-Zem" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="muA-5c-qio"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

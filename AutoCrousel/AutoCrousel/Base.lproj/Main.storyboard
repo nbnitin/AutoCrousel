@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoCrousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDB-Oo-Wea" customClass="CrouselView" customModule="AutoCrousel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTintColor">
+                                        <color key="value" red="0.96470588239999999" green="0.68627450980000004" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="progressBarTrackColor">
+                                        <color key="value" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="enableSingleClicks" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FDB-Oo-Wea" secondAttribute="bottom" id="2pR-RH-Cmi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FDB-Oo-Wea" secondAttribute="trailing" id="Sbv-Jg-BUx"/>
+                            <constraint firstItem="FDB-Oo-Wea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WL8-w1-N22"/>
+                            <constraint firstItem="FDB-Oo-Wea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kOv-xj-NIM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="crouselView" destination="FDB-Oo-Wea" id="KQ0-a2-ZdI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="4"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="WSJ-qW-dWm">
+            <objects>
+                <viewController id="efi-qx-kcu" customClass="ViewController2" customModule="AutoCrousel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hF-j3-xrs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HZ1-XO-ks4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xcs-OS-s0g">
+                                    <size key="itemSize" width="390" height="759"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="tvB-SQ-r16" customClass="ImageCrouselCell" customModule="AutoCrousel" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="759"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JCv-eh-rFn">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="759"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="xmw-ld-bbg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="759"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xmw-ld-bbg" firstAttribute="top" secondItem="JCv-eh-rFn" secondAttribute="top" id="ZkN-xl-Mfj"/>
+                                                <constraint firstItem="xmw-ld-bbg" firstAttribute="leading" secondItem="JCv-eh-rFn" secondAttribute="leading" id="mE0-e6-MDb"/>
+                                                <constraint firstAttribute="bottom" secondItem="xmw-ld-bbg" secondAttribute="bottom" id="t3r-xV-4bZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="xmw-ld-bbg" secondAttribute="trailing" id="vZ0-aW-09o"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="390" height="759"/>
+                                        <connections>
+                                            <outlet property="imgCrousel" destination="xmw-ld-bbg" id="IME-8U-o5S"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="textCell" id="pJ3-zz-7L9" customClass="TextCrouselCell" customModule="AutoCrousel" customModuleProvider="target">
+                                        <rect key="frame" x="390" y="0.0" width="390" height="759"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UjE-rJ-R5M">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="759"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN0-dh-24E">
+                                                    <rect key="frame" x="20" y="20" width="350" height="719"/>
+                                                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="50"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KN0-dh-24E" firstAttribute="centerY" secondItem="UjE-rJ-R5M" secondAttribute="centerY" id="S1Z-4d-DB7"/>
+                                                <constraint firstAttribute="bottom" secondItem="KN0-dh-24E" secondAttribute="bottom" constant="20" id="bqW-4Y-Cwk"/>
+                                                <constraint firstAttribute="trailing" secondItem="KN0-dh-24E" secondAttribute="trailing" constant="20" id="qhS-ET-Tz8"/>
+                                                <constraint firstItem="KN0-dh-24E" firstAttribute="leading" secondItem="UjE-rJ-R5M" secondAttribute="leading" constant="20" id="yUp-cL-1Ev"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="390" height="759"/>
+                                        <connections>
+                                            <outlet property="lblSrc" destination="KN0-dh-24E" id="Z8R-FU-lsO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="5UC-iF-Vq8" customClass="VideoCrouselCell" customModule="AutoCrousel" customModuleProvider="target">
+                                        <rect key="frame" x="780" y="0.0" width="390" height="759"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="6S8-Th-y7g">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="759"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="390" height="759"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="efi-qx-kcu" id="23v-jx-2V7"/>
+                                    <outlet property="delegate" destination="efi-qx-kcu" id="dit-aX-YQb"/>
+                                </connections>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cpV-Ax-Y4X">
+                                <rect key="frame" x="20" y="79" width="353" height="4"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oeD-kL-1Pj">
+                                        <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemOrangeColor"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="26e-D4-pbB">
+                                        <rect key="frame" x="89.666666666666686" y="0.0" width="84.333333333333314" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemOrangeColor"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yad-FF-ix7">
+                                        <rect key="frame" x="179" y="0.0" width="84.666666666666686" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemOrangeColor"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ax-GO-hM5">
+                                        <rect key="frame" x="268.66666666666669" y="0.0" width="84.333333333333314" height="4"/>
+                                        <color key="progressTintColor" systemColor="systemOrangeColor"/>
+                                        <color key="trackTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PE8-2H-5uS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cpV-Ax-Y4X" firstAttribute="leading" secondItem="PE8-2H-5uS" secondAttribute="leading" constant="20" id="4cn-uK-b4W"/>
+                            <constraint firstItem="HZ1-XO-ks4" firstAttribute="leading" secondItem="PE8-2H-5uS" secondAttribute="leading" id="AM9-qO-o9r"/>
+                            <constraint firstItem="PE8-2H-5uS" firstAttribute="bottom" secondItem="HZ1-XO-ks4" secondAttribute="bottom" id="KgV-qg-3Su"/>
+                            <constraint firstItem="PE8-2H-5uS" firstAttribute="trailing" secondItem="cpV-Ax-Y4X" secondAttribute="trailing" constant="20" id="Oxi-hR-foE"/>
+                            <constraint firstItem="cpV-Ax-Y4X" firstAttribute="top" secondItem="PE8-2H-5uS" secondAttribute="top" constant="20" id="VlZ-HG-3E6"/>
+                            <constraint firstItem="PE8-2H-5uS" firstAttribute="trailing" secondItem="HZ1-XO-ks4" secondAttribute="trailing" id="Zm0-1f-dQi"/>
+                            <constraint firstItem="HZ1-XO-ks4" firstAttribute="top" secondItem="PE8-2H-5uS" secondAttribute="top" id="qRF-vt-F9f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="crouselCollView" destination="HZ1-XO-ks4" id="Svt-Qg-VGh"/>
+                        <outletCollection property="progressViews" destination="oeD-kL-1Pj" collectionClass="NSMutableArray" id="Ra0-FV-T8Y"/>
+                        <outletCollection property="progressViews" destination="26e-D4-pbB" collectionClass="NSMutableArray" id="xbp-1x-53c"/>
+                        <outletCollection property="progressViews" destination="yad-FF-ix7" collectionClass="NSMutableArray" id="ejN-a6-toO"/>
+                        <outletCollection property="progressViews" destination="9ax-GO-hM5" collectionClass="NSMutableArray" id="HFw-5G-PIJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvf-gi-Qy5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756.48854961832058" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img1" width="339" height="509"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
